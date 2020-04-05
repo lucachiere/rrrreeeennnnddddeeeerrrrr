@@ -1,0 +1,10 @@
+extends layout
+
+block content
+    h1 Clash Royale
+    each u, index in data
+        h4 #{u.Unit}
+        a(href=`/users/search/${index}`)
+            img(src=`../images/${u.Unit}.png`) 
+        
+

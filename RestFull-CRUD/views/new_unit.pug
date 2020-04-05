@@ -1,0 +1,17 @@
+extends layout
+
+block content
+    h1 New Unit
+    each u in unit
+    h2 | Unit: #{u.Unit} 
+        h5 | Cost: #{u.Cost}
+        h5 | Hit_Speed: #{u.Hit_Speed}
+        h5 | Speed: #{u.Speed}
+        h5 | Deploy_Time: #{u.Deploy_Time}
+        h5 | Range: #{u.Range}
+        h5 | Target: #{u.Target}
+        h5 | Count: #{u.Count}
+        h5 | Transport: #{u.Transport}
+        h5 | Type: #{u.Type}
+        h5 | Rarity: #{u.Rarity}
+        img(src=`/../images/${u.Unit}.png`) 

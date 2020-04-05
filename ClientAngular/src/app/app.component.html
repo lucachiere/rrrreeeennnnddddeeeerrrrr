@@ -1,0 +1,68 @@
+<button (click)="getUnitList()" class="btn btn-secondary">
+  Get unit list
+</button>
+<div class="row">
+<div class="col-sm-9 col-md-6">
+<div *ngFor="let unit of data" class="unit">  <!--per ogni elemento del vettore ripeto il div-->
+  <h1>{{unit.Unit}} </h1>
+  costo: {{unit.Cost}} <br>
+  hit speed: {{unit.Hit_Speed}}<br>
+  deploy_time: {{unit.Deploy_Time}}<br>
+  range: {{unit.Range}}<br>
+  target: {{unit.Target}}<br>
+  count: {{unit.Count}}<br>
+  transport: {{unit.Transport}}<br>
+  type: {{unit.Type}}<br>
+  rarity: {{unit.Rarity}}<br>
+  <img src="assets/images/{{unit.Unit}}.png">
+</div>
+</div>
+<div class="col-sm-3 col-md-6">
+  <form class="jumbotron">
+  <h3 >Add a Unit</h3>
+  <div>
+    <label for="unit">Unit:</label>
+    <input name="unit" #newUnit class="form-control">
+  </div>
+  <div>
+    <label for="cost">Cost:</label>
+    <input name="cost" #newCost class="form-control">
+  </div>
+  <div>
+    <label for="hit_speed">Hit_Speed:</label>
+    <input name="hit_speed" #newHitSpeed class="form-control">
+  </div>
+  <div>
+    <label for="deploy_time">Deploy_Time:</label>
+    <input name="deploy_time" #newDeployTime class="form-control">
+  </div>
+  <div>
+    <label for="range">Range:</label>
+    <input name="range" #newRange class="form-control">
+  </div>
+  <div>
+    <label for="target">Target:</label>
+    <input name="target" #newTarget class="form-control">
+  </div>
+  <div>
+    <label for="count">Count:</label>
+    <input name="count" #newCount class="form-control">
+  </div>
+  <div>
+    <label for="transport">Transport:</label>
+    <input name="transport" #newTransport class="form-control">
+  </div>
+  <div>
+    <label for="type">Type:</label>
+    <input name="type" #newType class="form-control">
+  </div>
+   <div>
+    <label for="rarity">Rarity:</label>
+    <input name="rarity" #newRarity class="form-control">
+  </div>
+  <button (click)="addUnit(newUnit, newCost,newHitSpeed,newDeployTime,newRange,newTarget,newCount,newTransport,newType,newRarity)" class="btn btn-primary">
+  Insert new unit
+  </button>
+</form>
+</div>
+</div>

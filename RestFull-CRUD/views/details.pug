@@ -1,0 +1,16 @@
+extends layout
+
+block content
+    h1 Deatils 
+        h2 | Unit: #{data.Unit} 
+        h5 | Cost: #{data.Cost}
+        h5 | Hit_Speed: #{data.Hit_Speed}
+        h5 | Speed: #{data.Speed}
+        h5 | Deploy_Time: #{data.Deploy_Time}
+        h5 | Range: #{data.Range}
+        h5 | Target: #{data.Target}
+        h5 | Count: #{data.Count}
+        h5 | Transport: #{data.Transport}
+        h5 | Type: #{data.Type}
+        h5 | Rarity: #{data.Rarity}
+        img(src=`/../images/${data.Unit}.png`) 
