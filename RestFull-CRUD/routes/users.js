@@ -4,10 +4,10 @@ const sql = require('mssql');
 var createError = require('http-errors');
 
 const config = {
-  user: '4DD_04',  //Vostro user name
-  password: 'xxx123##', //Vostra password
-  server: "213.140.22.237",  //Stringa di connessione
-  database: '4DD_04', //(Nome del DB)
+  user: '4DD_08', 
+  password: 'xxx123##', 
+  server: "213.140.22.237", 
+  database: '4DD_08', 
 }
 
 //Function to connect to database and execute query
@@ -109,7 +109,7 @@ router.post('/', function (req, res, next) {
   let sqlInsert = `INSERT INTO dbo.[cr-unit-attributes] (Unit,Cost,Hit_Speed,Speed,Deploy_Time,Range,Target,Count,Transport,Type,Rarity) 
                      VALUES ('${unit.Unit}','${unit.Cost}','${unit.Hit_Speed}', '${unit.Speed}', '${unit.Deploy_Time}', '${unit.Range}', '${unit.Target}', '${unit.Count}', '${unit.Transport}', '${unit.Type}', '${unit.Rarity}')`;
   executeQuery(res, sqlInsert, next, "new_unit");
-  res.send({success:true, message: "unità inserita con successo", unit: unit})
+  res.send({success:true, message: "unità inserita con successo!", unit: unit})
 });
 
 module.exports = router;
